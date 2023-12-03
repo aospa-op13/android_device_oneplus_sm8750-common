@@ -206,6 +206,7 @@ PRODUCT_PACKAGES += \
     OnePlusSM8750CarrierConfig \
     OnePlusSM8750Frameworks \
     OnePlusSM8750Settings \
+    OnePlusSM8750SettingsProvider \
     OnePlusSM8750SystemUI
 
 # Partitions
