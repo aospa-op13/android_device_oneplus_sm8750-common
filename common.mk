@@ -206,13 +206,11 @@ PRODUCT_PACKAGES += \
     AOSPAOnePlusSM8750Frameworks \
     AOSPAOnePlusSM8750SystemUI \
     FrameworksResTargetEuicc \
-    FrameworksResTarget \
     NcmTetheringOverlay \
     OnePlusSM8750CarrierConfig \
     OnePlusSM8750Frameworks \
     OnePlusSM8750Settings \
-    OnePlusSM8750SystemUI \
-    WifiResTarget
+    OnePlusSM8750SystemUI
 
 # Partitions
 PRODUCT_PACKAGES += \
