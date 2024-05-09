@@ -94,9 +94,6 @@ media.c2.hal.selection=aidl
 media.stagefright.audio.deep=false
 vendor.media.omx=0
 
-# Pasr
-vendor.pasr.activemode.enabled=true
-
 # Radio
 persist.vendor.radio.mdccbsize=164
 ro.telephony.default_network=33,33
