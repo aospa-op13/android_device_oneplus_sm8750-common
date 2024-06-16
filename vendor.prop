@@ -76,6 +76,9 @@ vendor.media.omx=0
 # Sensors
 persist.vendor.sensors.debug.hal=0
 
+# VM
+ro.vendor.vm.ssr.enable=false
+
 # Widevine
 vendor.wv.oemcrypto.debug.enable_external_display_check=false
 vendor.wv.oemcrypto.debug.enable_hlos_data_path=true
