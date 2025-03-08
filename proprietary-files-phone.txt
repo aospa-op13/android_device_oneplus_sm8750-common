@@ -1,10 +1,6 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
 ## are from OnePlus 13 (CPH2653_16.0.3.501(EX01)).
 
-# Current blobs with ELF checks disabled:
-# lowi-server and qms depends on libwpa_client, which are gnu makefile targets
-# libcne depends on libwpa_client, which are gnu makefile targets
-
 # ConsumerIR
 my_product/del-app/ConsumerIRApp/ConsumerIRApp.apk:product/app/ConsumerIRApp/ConsumerIRApp.apk;PRESIGNED
 my_stock/etc/asl/com.oplus.consumerIRApp-safetyLabel.xml:product/etc/asl/com.oplus.consumerIRApp-safetyLabel.xml
@@ -54,7 +50,7 @@ vendor/etc/vintf/manifest/mwqem-saidl.xml
 vendor/lib64/libCneAppJni.so
 vendor/lib64/libWlanServiceJni.so
 vendor/lib64/libcacertclient.so
-vendor/lib64/libcne.so;DISABLE_CHECKELF
+vendor/lib64/libcne.so
 vendor/lib64/libcneapiclient.so
 vendor/lib64/libcneoplookup.so
 vendor/lib64/libcneqmiutils.so
@@ -166,7 +162,7 @@ odm/etc/sap.conf
 vendor/bin/edgnss-daemon
 vendor/bin/engine-service
 vendor/bin/loc_launcher
-vendor/bin/lowi-server;DISABLE_CHECKELF
+vendor/bin/lowi-server
 vendor/bin/mlid
 vendor/bin/qsap_location
 vendor/bin/slim_daemon
@@ -313,7 +309,7 @@ odm/lib64/vendor.oplus.hardware.subsys-V5-ndk.so
 odm/lib64/vendor.oplus.hardware.subsys_radio-V8-ndk.so
 vendor/bin/hw/qcrilNrd
 vendor/bin/ks
-vendor/bin/qms;DISABLE_CHECKELF
+vendor/bin/qms
 vendor/bin/qtigetprop
 vendor/bin/qtisetprop
 vendor/bin/vendor.qti.syshealthmon-service
