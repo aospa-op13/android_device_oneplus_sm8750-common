@@ -81,7 +81,6 @@ lib_fixups: lib_fixups_user_type = {
         'libaudioserviceexampleimpl',
         'liblx-osal',
         'libvui_intf',
-        'libwpa_client',
     ): lib_fixup_remove,
 }
 
