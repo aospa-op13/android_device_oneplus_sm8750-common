@@ -4,6 +4,10 @@
 # Current blobs with ELF checks disabled:
 # lowi-server and qms depends on libwpa_client, which are gnu makefile targets
 
+# ConsumerIR
+my_product/del-app/ConsumerIRApp/ConsumerIRApp.apk:product/app/ConsumerIRApp/ConsumerIRApp.apk;PRESIGNED
+my_stock/etc/asl/com.oplus.consumerIRApp-safetyLabel.xml:product/etc/asl/com.oplus.consumerIRApp-safetyLabel.xml
+
 # Context Hub
 odm/etc/init/android.hardware.contexthub-service.qmi.rc
 odm/etc/vintf/manifest/android.hardware.contexthub-service.qmi.xml
