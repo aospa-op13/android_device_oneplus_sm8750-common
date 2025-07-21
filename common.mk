@@ -128,18 +128,9 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     fstab.qcom \
-    init.class_main.sh \
-    init.kernel.post_boot-memory.sh \
-    init.kernel.post_boot-sun.sh \
-    init.kernel.post_boot-sun_default_6_2.sh \
     init.oplus.rc \
-    init.qcom.early_boot.sh \
-    init.qcom.rc \
-    init.qcom.recovery.rc \
-    init.qcom.sh \
     init.target.rc \
-    ueventd.oplus.rc \
-    ueventd.qcom.rc
+    ueventd.oplus.rc
 
 # Kernel
 PRODUCT_COPY_FILES += \
