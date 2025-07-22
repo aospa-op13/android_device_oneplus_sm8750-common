@@ -116,6 +116,14 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libbase.so'),
     'vendor/lib64/libwfdmmsrc_proprietary.so': blob_fixup()
         .replace_needed('android.media.audio.common.types-V2-ndk.so', 'android.media.audio.common.types-V3-ndk.so'),
+    (
+        'vendor/bin/qcc-vendor',
+        'vendor/bin/qms',
+        'vendor/bin/xtra-daemon',
+        'vendor/lib64/libqcc_sdk.so',
+        'vendor/lib64/libqms_client.so'
+    ): blob_fixup()
+        .add_needed('libbinder_shim.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
