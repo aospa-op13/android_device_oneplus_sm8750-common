@@ -185,6 +185,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     gps \
     init \
     overlay \
+    perf \
     telephony \
     wfd
 

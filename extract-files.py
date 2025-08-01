@@ -21,6 +21,7 @@ from extract_utils.main import (
 namespace_imports = [
     'device/oneplus/sm8750-common',
     'hardware/oplus',
+    'vendor/qcom/common/vendor/perf',
 ]
 
 
