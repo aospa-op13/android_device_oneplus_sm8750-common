@@ -21,6 +21,7 @@ from extract_utils.main import (
 namespace_imports = [
     'device/oneplus/sm8750-common',
     'hardware/oplus',
+    'vendor/qcom/common/vendor/perf',
 ]
 
 
@@ -120,7 +121,6 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('android.media.audio.common.types-V4-ndk.so', 'android.media.audio.common.types-V3-ndk.so')
         .replace_needed('libaudio_aidl_conversion_common_ndk.so', 'libaudio_aidl_conversion_common_ndk_prebuilt.so'),
     (
-        'vendor/lib64/libapengine.so',
         'vendor/lib64/libqti-perfd.so',
     ): blob_fixup()
         .replace_needed('vendor.qti.hardware.display.config-V5-ndk.so', 'vendor.qti.hardware.display.config-V12-ndk.so'),
