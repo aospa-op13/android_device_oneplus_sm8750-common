@@ -106,17 +106,6 @@ vendor.media.omx=0
 # Netflix
 ro.netflix.bsp_rev=Q8750-39568-1
 
-# Pasr
-vendor.pasr.activemode.enabled=true
-
-# Perf
-ro.vendor.extension_library=libqti-perfd-client.so
-ro.vendor.perf-hal.ver=3.0
-ro.vendor.perf.scroll_opt=1
-ro.vendor.qspm.enable=true
-vendor.perf.framepacing.enable=1
-vendor.perf.framepacing.window_apis=0x04
-
 # Sensors
 persist.vendor.sensors.debug.hal=0
 
