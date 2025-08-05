@@ -74,17 +74,6 @@ persist.sys.fuse.passthrough.enable=true
 vendor.gatekeeper.disable_spu=true
 vendor.gatekeeper.is_security_level_spu=0
 
-# Graphics
-debug.sf.enable_hwc_vds=0
-debug.sf.hw=0
-debug.sf.latch_unsignaled=0
-debug.sf.late.app.duration=13666666
-debug.sf.late.sf.duration=10500000
-debug.sf.use_phase_offsets_as_durations=1
-ro.hardware.egl=adreno
-ro.hardware.vulkan=adreno
-ro.opengles.version=196610
-
 # IMS
 persist.vendor.ims.rtp.enableqxdm=15
 persist.vendor.ims.vt.enableadb=3
