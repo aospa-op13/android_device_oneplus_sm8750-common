@@ -115,8 +115,5 @@ vendor.usb.use_gadget_hal=1
 # Widevine
 vendor.wv.oemcrypto.debug.enable_hlos_data_path=true
 
-# WiFi
-wifi.aware.interface=wifi-aware0
-
 # Zygote
 zygote.critical_window.minute=10
