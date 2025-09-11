@@ -308,6 +308,7 @@ vendor/lib64/libhdrdynamicootf.so
 # Display (HWC)
 vendor/bin/qdcmss
 vendor/bin/qguard
+vendor/bin/ubwcconvert
 vendor/etc/init/qdcmss.rc
 vendor/etc/init/qguard.rc
 vendor/etc/qguard.json
@@ -361,6 +362,7 @@ vendor/etc/display/display_alignments.json
 vendor/etc/display/formats.json
 vendor/etc/display/graphics_alignments.json
 vendor/etc/display/pipe_config_DPU11__.xml
+vendor/etc/display/thermallevel_to_fps.xml
 vendor/etc/display/ubwc_alignments.json
 vendor/etc/display/video_alignments.json
 
@@ -397,6 +399,12 @@ vendor/lib64/vendor.oplus.hardware.displaypanelfeature-V1-ndk.so;MODULE_SUFFIX=_
 # Display postprocessing
 vendor/bin/ppd
 vendor/lib64/libdisp-aba.so
+
+# Dolby Vision
+odm/etc/dolby/display/dolby_vision.cfg
+odm/etc/dolby/dolby_vision.cfg
+odm/etc/media_codecs_dolby_vision.xml
+vendor/etc/dolby_vision.cfg
 
 # dpAP Firmware
 vendor/firmware/dpAP_full.mbn
@@ -769,6 +777,7 @@ vendor/etc/perf/commonresourceconfigs.xml
 vendor/etc/perf/commonsysnodesconfigs.xml
 vendor/etc/perf/perfboostsconfig.xml
 vendor/etc/perf/perfconfigstore.xml
+vendor/etc/perf/qapegameconfig.txt
 vendor/etc/perf/targetavcsysnodesconfigs.xml
 vendor/etc/perf/targetconfig.xml
 vendor/etc/perf/targetresourceconfigs.xml
@@ -783,24 +792,31 @@ vendor/etc/pwr/VideoPowerOptFeature.xml
 vendor/etc/seccomp_policy/qsap_qapeservice.policy
 vendor/etc/vintf/manifest/vendor.qti.hardware.perf2.xml
 vendor/etc/vintf/manifest/vendor.qti.hardware.power.powermodule.xml
+vendor/etc/smomo_setting.xml
 vendor/lib64/libaodoptfeature.so
 vendor/lib64/libapengine.so
 vendor/lib64/libappclassifier.so
+vendor/lib64/libgamepoweroptfeature.so
 vendor/lib64/liblearningmodule.so
 vendor/lib64/liblightninglaunches.so
 vendor/lib64/liblmutils-ns.so
 vendor/lib64/libmemperfd.so
 vendor/lib64/libmeters-ns.so
 vendor/lib64/libmeters.so
+vendor/lib64/liboffscreenpoweroptfeature.so
+vendor/lib64/libpasrutils.so
 vendor/lib64/libperfconfig.so
 vendor/lib64/libperfioctl.so
+vendor/lib64/libpowercallback.so
 vendor/lib64/libpowercore.so
 vendor/lib64/libprefapps.so
 vendor/lib64/libprekill.so
 vendor/lib64/libprocomp.so
 vendor/lib64/libpsmoptfeature.so
 vendor/lib64/libq-perflog.so
+vendor/lib64/libqape_oem_ext.so
 vendor/lib64/libqapesdk.so
+vendor/lib64/libqti-MemHal-client.so
 vendor/lib64/libqti-perfd-client.so
 vendor/lib64/libqti-perfd.so
 vendor/lib64/libqti-perfextn-intf.so
@@ -808,6 +824,7 @@ vendor/lib64/libqti-qesdk-secure.so
 vendor/lib64/libqti-scenariod.so
 vendor/lib64/libqti-util.so
 vendor/lib64/libqti-utils.so
+vendor/lib64/libreffeature.so
 vendor/lib64/libsilkyscrolls.so
 vendor/lib64/libskewknob.so
 vendor/lib64/libstandbyfeature.so
@@ -843,6 +860,7 @@ vendor/bin/snapdragon_services
 vendor/etc/init/qesdk-manager.rc
 vendor/etc/init/snapdragon_services.rc
 vendor/etc/seccomp_policy/qesdk.policy
+vendor/etc/seccomp_policy/qesdksec.policy
 vendor/etc/vintf/manifest/qesdk-manager.xml
 vendor/etc/vintf/manifest/snapdragon_services.xml
 vendor/lib64/libqesdk2_0.so
@@ -887,6 +905,26 @@ vendor/lib64/libqrtr.so
 vendor/lib64/libqsocket.so
 vendor/lib64/libsmemlog.so
 
+# QSN
+vendor/lib64/qsn1nrt430.bin
+vendor/lib64/qsn1nrt43180.bin
+vendor/lib64/qsn1nrt43270.bin
+vendor/lib64/qsn1nrt4390.bin
+vendor/lib64/qsn1rt1690.bin
+vendor/lib64/qsn1rt169180.bin
+vendor/lib64/qsn1rt169270.bin
+vendor/lib64/qsn1rt16990.bin
+vendor/lib64/qsn1rt430.bin
+vendor/lib64/qsn1rt43180.bin
+vendor/lib64/qsn1rt43270.bin
+vendor/lib64/qsn1rt4390.bin
+vendor/lib64/qsn1rtlp1690.bin
+vendor/lib64/qsn1rtlp169270.bin
+vendor/lib64/qsn1rtlp430.bin
+vendor/lib64/qsn1rtlp43270.bin
+vendor/lib64/qsn2all.bin
+vendor/lib64/qsn3all.bin
+
 # QSPM
 vendor/bin/vendor.qti.qspmhal-service
 vendor/etc/init/vendor.qti.qspmhal-service.rc
@@ -918,6 +956,12 @@ vendor/lib64/libspl.so
 vendor/lib64/libssd.so
 vendor/lib64/vendor.qti.hardware.qseecom-V1-ndk.so
 
+# QTI service tracker
+vendor/bin/hw/vendor.qti.hardware.servicetrackeraidl-service
+vendor/etc/init/vendor.qti.hardware.servicetrackeraidl-service.rc
+vendor/etc/vintf/manifest/vendor.qti.hardware.servicetrackeraidl-service.xml
+vendor/lib64/hw/vendor.qti.hardware.servicetrackeraidl-impl.so
+
 # SCVE
 vendor/lib64/libscveCommon.so
 vendor/lib64/libscveCommon_stub.so
@@ -936,6 +980,12 @@ vendor/lib64/libminkipcbinder_vendor.so
 vendor/lib64/libminksocket_vendor.so
 vendor/lib64/libqcbor.so
 vendor/lib64/vendor.qti.hardware.minkipcbinder-V1-ndk.so;MODULE_SUFFIX=_vendor
+
+# SSR
+vendor/bin/ssr_diag
+vendor/bin/ssr_setup
+vendor/bin/subsystem_ramdump
+vendor/lib64/libsubsystem_control.so
 
 # Sensors
 odm/bin/oplus_sensor_fb
@@ -971,6 +1021,7 @@ vendor/lib64/libsns_direct_channel_stub.so
 vendor/lib64/libsns_dynamic_loader_stub.so
 vendor/lib64/libsns_registry_skel.so
 vendor/lib64/libsns_remote_proc_state_stub.so
+vendor/lib64/libsnsapi-full.so
 vendor/lib64/libsnsapi.so
 vendor/lib64/libsnsdiaglog.so
 vendor/lib64/libsnsutils.so
