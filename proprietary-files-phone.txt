@@ -359,11 +359,17 @@ vendor/lib64/vendor.qti.hardware.radio.uim_remote_server-V1-ndk.so
 vendor/lib64/vendor.qti.syshealthmon-V1-ndk.so
 
 # RIL - UIM
+product/app/uimgbaservice/uimgbaservice.apk
 product/app/uimremoteclient/uimremoteclient.apk
 product/app/uimremoteserver/uimremoteserver.apk
+product/etc/permissions/UimGba.xml
+product/etc/permissions/UimGbaManager.xml
 product/etc/permissions/UimService.xml
+product/framework/uimgbalibrary.jar
+product/framework/uimgbamanagerlibrary.jar
 product/framework/uimremoteclientlibrary.jar
 product/framework/uimremoteserverlibrary.jar
+product/framework/uimservicelibrary.jar
 system/etc/permissions/uimremoteclient.xml
 system/etc/permissions/uimremoteserver.xml
 
