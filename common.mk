@@ -200,11 +200,9 @@ TARGET_COMMON_QTI_COMPONENTS := \
     overlay \
     wfd
 
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-lineage
-
-PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_PACKAGES += \
+    AOSPAOnePlusSM8750Frameworks \
+    AOSPAOnePlusSM8750SystemUI \
     FrameworksResTargetEuicc \
     FrameworksResTarget \
     NcmTetheringOverlay \
