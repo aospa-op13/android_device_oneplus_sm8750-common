@@ -157,7 +157,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     vendor.oplus.hardware.commondcs-service \
     vendor.oplus.hardware.osense.client-service \
-    vendor.oplus.hardware.performance-service
+    vendor.oplus.hardware.performance-service \
+    vendor.oplus.hardware.urcc-service
 
 # QTI Components
 TARGET_COMMON_QTI_COMPONENTS := \
