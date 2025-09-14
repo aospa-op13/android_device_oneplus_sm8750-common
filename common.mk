@@ -202,7 +202,6 @@ TARGET_COMMON_QTI_COMPONENTS := \
 PRODUCT_PACKAGES += \
     AOSPAOnePlusSM8750Frameworks \
     AOSPAOnePlusSM8750SystemUI \
-    FrameworksResTargetEuicc \
     OnePlusSM8750CarrierConfig \
     OnePlusSM8750Frameworks \
     OnePlusSM8750Settings \
@@ -265,13 +264,6 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Storage
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
-
-# Oplus EUICC
-PRODUCT_PACKAGES += \
-    OplusEuicc \
-
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.telephony.euicc.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.telephony.euicc.xml
 
 # Oplus fwk
 $(call inherit-product, hardware/oplus/oplus-fwk/oplus-fwk.mk)
