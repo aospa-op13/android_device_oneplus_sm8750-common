@@ -96,11 +96,6 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libshims_aidl_fingerprint_v3.oplus.so'),
     'product/etc/sysconfig/com.android.hotwordenrollment.common.util.xml': blob_fixup()
         .regex_replace('/my_product', '/product'),
-    'vendor/etc/libnfc-nci.conf': blob_fixup()
-        .regex_replace('NFC_DEBUG_ENABLED=1', 'NFC_DEBUG_ENABLED=0'),
-    'vendor/etc/libnfc-nxp.conf': blob_fixup()
-        .regex_replace('(NXPLOG_.*_LOGLEVEL)=0x03', '\\1=0x02')
-        .regex_replace('NFC_DEBUG_ENABLED=1', 'NFC_DEBUG_ENABLED=0'),
     'vendor/etc/media_codecs_sun.xml': blob_fixup()
         .regex_replace('.*media_codecs_(google_audio|google_c2|google_telephony|google_video|vendor_audio).*\n', ''),
     'vendor/lib64/hw/libaudiocorehal.qti.so': blob_fixup()
