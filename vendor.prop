@@ -100,18 +100,6 @@ ro.netflix.bsp_rev=Q8750-39568-1
 # Sensors
 persist.vendor.sensors.debug.hal=0
 
-# USB
-sys.usb.mtp.batchcancel=1
-vendor.usb.controller=a600000.dwc3
-vendor.usb.diag.func.name=ffs
-vendor.usb.dpl.inst.name=dpl
-vendor.usb.qdss.inst.name=qdss_sw
-vendor.usb.rmnet.func.name=gsi
-vendor.usb.rmnet.inst.name=rmnet
-vendor.usb.rndis.func.name=gsi
-vendor.usb.use_ffs_mtp=1
-vendor.usb.use_gadget_hal=1
-
 # Widevine
 vendor.wv.oemcrypto.debug.enable_hlos_data_path=true
 
