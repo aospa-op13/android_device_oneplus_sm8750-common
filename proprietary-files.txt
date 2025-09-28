@@ -2,6 +2,7 @@
 ## are from OnePlus 13 (CPH2653_15.0.0.850(EX01)).
 
 # Current blobs with ELF checks disabled:
+# libcne depends on libwpa_client, which are gnu makefile targets
 # libar-pal depends on libagmclient and libar-gsl, which are gnu makefile targets
 # libarmemlog and libvui_intf depend on liblx-osal, which is a gnu makefile target
 # libmcs depends on libar-acdb, libagm, libats and liblx-osal, which are gnu makefile targets
@@ -56,23 +57,21 @@ vendor/etc/models/acd/environment.eai
 vendor/etc/models/acd/event.eai
 vendor/etc/models/acd/music.eai
 vendor/etc/models/acd/speech.eai
-vendor/etc/vintf/manifest/audioeffectservice_qti.xml
-vendor/etc/vintf/manifest/manifest_audiocorehal_default.xml
 vendor/etc/vintf/manifest/qasr_vintf.xml
 vendor/lib64/hw/audio/libQnnHtp.so;MODULE_SUFFIX=.audio
 vendor/lib64/hw/audio/libQnnHtpV79Skel.so;MODULE_SUFFIX=.audio
 vendor/lib64/hw/audio/libQnnHtpV79Stub.so;MODULE_SUFFIX=.audio
 vendor/lib64/hw/audio/libQnnSystem.so;MODULE_SUFFIX=.audio
-vendor/lib64/hw/libaudiocorehal.default.so;DISABLE_CHECKELF
-vendor/lib64/hw/libaudiocorehal.qti.so;DISABLE_CHECKELF
-vendor/lib64/hw/libaudioeffecthal.qti.so
+vendor/lib64/hw/libaudiocorehal.default.so;DISABLE_DEPS;REQUIRED=manifest_audiocorehal_default.xml
+vendor/lib64/hw/libaudiocorehal.qti.so;DISABLE_DEPS
+vendor/lib64/hw/libaudioeffecthal.qti.so;DISABLE_DEPS;REQUIRED=audioeffectservice_qti.xml
 vendor/lib64/libPeripheralStateUtils.so
 vendor/lib64/libVoiceSdk.so
 vendor/lib64/libadm.so
 vendor/lib64/libar-pal.so;DISABLE_CHECKELF
 vendor/lib64/libarmemlog.so;DISABLE_CHECKELF
 vendor/lib64/libaudio_log_utils.so
-vendor/lib64/libaudioplatformconverter.qti.so
+vendor/lib64/libaudioplatformconverter.qti.so;DISABLE_DEPS
 vendor/lib64/libcapiv2svacnnvendor.so
 vendor/lib64/libcapiv2svarnnvendor.so
 vendor/lib64/libcapiv2udk7vendor.so
@@ -102,13 +101,9 @@ vendor/lib64/soundfx/libbundleaidl.so;DISABLE_DEPS
 vendor/lib64/soundfx/libdownmixaidl.so;DISABLE_DEPS
 vendor/lib64/soundfx/libdynamicsprocessingaidl.so;DISABLE_DEPS
 vendor/lib64/soundfx/libloudnessenhanceraidl.so;DISABLE_DEPS
-vendor/lib64/soundfx/libqcompostprocbundle.so
-vendor/lib64/soundfx/libqcomvisualizer.so
-vendor/lib64/soundfx/libqcomvoiceprocessing.so
 vendor/lib64/soundfx/libquasar.so
 vendor/lib64/soundfx/libreverbaidl.so;DISABLE_DEPS
 vendor/lib64/soundfx/libvisualizeraidl.so;DISABLE_DEPS
-vendor/lib64/soundfx/libvolumelistener.so
 
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@aidl-service-qti
@@ -132,8 +127,6 @@ vendor/lib64/libbtnv.so
 vendor/lib64/libsoc_helper.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.bttpi-V3-ndk.so
-vendor/lib64/vendor.qti.hardware.fm-V1-ndk.so
-vendor/lib64/vendor.qti.hardware.fm@1.0.so
 
 # Bluetooth (A2DP)
 vendor/lib64/hw/android.hardware.bluetooth.audio-impl-qti.so
@@ -200,7 +193,7 @@ vendor/etc/vintf/manifest/mwqem-saidl.xml
 vendor/lib64/libCneAppJni.so
 vendor/lib64/libWlanServiceJni.so
 vendor/lib64/libcacertclient.so
-vendor/lib64/libcne.so
+vendor/lib64/libcne.so;DISABLE_CHECKELF
 vendor/lib64/libcneapiclient.so
 vendor/lib64/libcneoplookup.so
 vendor/lib64/libcneqmiutils.so
@@ -910,7 +903,6 @@ vendor/etc/init/vendor.qti.tftp.rc
 vendor/bin/thermal-engine-v2
 vendor/etc/init/init_thermal-engine-v2.rc
 vendor/etc/thermal-engine.conf
-vendor/lib64/liblmthermallistner.so
 vendor/lib64/libthermalclient.so
 
 # Time services
