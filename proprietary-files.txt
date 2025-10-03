@@ -90,6 +90,31 @@ vendor/lib64/libvui_dmgr_client.so
 vendor/lib64/vendor.qti.hardware.ListenSoundModelAidl-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.qasr-V1-ndk.so
 
+# Audio (Configurations)
+vendor/etc/audio/sku_sun/audio_effects.conf
+vendor/etc/audio/sku_sun/audio_effects.xml
+vendor/etc/audio/sku_sun/audio_effects_config.xml
+vendor/etc/audio/sku_sun/audio_effects_config_stub.xml
+vendor/etc/audio/sku_sun/audio_policy_configuration.xml
+vendor/etc/audio/sku_sun/mixer_paths_sun_cdp.xml
+vendor/etc/audio/sku_sun/mixer_paths_sun_mtp_wsa883x_qmp.xml
+vendor/etc/audio/sku_sun/mixer_paths_sun_mtp.xml
+vendor/etc/audio/sku_sun/mixer_paths_sun_qrd.xml
+vendor/etc/audio/sku_sun/mixer_paths_sun_qrd_sku2.xml
+vendor/etc/audio/sku_sun/resourcemanager_sun_cdp.xml
+vendor/etc/audio/sku_sun/resourcemanager_sun_mtp.xml
+vendor/etc/audio/sku_sun/resourcemanager_sun_qrd.xml
+vendor/etc/audio/sku_sun/resourcemanager_sun_qrd_sku2.xml
+vendor/etc/audio/sku_sun_qssi/audio_policy_configuration.xml
+vendor/etc/a2dp_audio_policy_configuration.xml
+vendor/etc/audio_policy_configuration.xml
+vendor/etc/bluetooth_qti_audio_policy_configuration.xml
+vendor/etc/bluetooth_qti_hearing_aid_audio_policy_configuration.xml
+vendor/etc/microphone_characteristics.xml
+vendor/etc/r_submix_audio_policy_configuration.xml
+vendor/etc/usb_audio_policy_configuration.xml
+vendor/etc/usecaseKvManager.xml
+
 # Audio - old AIDL dependencies
 vendor/lib64/android.hardware.bluetooth.audio-impl.so:vendor/lib64/android.hardware.bluetooth.audio-impl_prebuilt.so;FIX_SONAME
 vendor/lib64/libaudio_aidl_conversion_common_ndk.so:vendor/lib64/libaudio_aidl_conversion_common_ndk_prebuilt.so;FIX_SONAME
