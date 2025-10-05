@@ -91,14 +91,15 @@ vendor/lib64/vendor.qti.hardware.ListenSoundModelAidl-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.qasr-V1-ndk.so
 
 # Audio (Configurations)
+vendor/etc/a2dp_audio_policy_configuration.xml
 vendor/etc/audio/sku_sun/audio_effects.conf
 vendor/etc/audio/sku_sun/audio_effects.xml
 vendor/etc/audio/sku_sun/audio_effects_config.xml
 vendor/etc/audio/sku_sun/audio_effects_config_stub.xml
 vendor/etc/audio/sku_sun/audio_policy_configuration.xml
 vendor/etc/audio/sku_sun/mixer_paths_sun_cdp.xml
-vendor/etc/audio/sku_sun/mixer_paths_sun_mtp_wsa883x_qmp.xml
 vendor/etc/audio/sku_sun/mixer_paths_sun_mtp.xml
+vendor/etc/audio/sku_sun/mixer_paths_sun_mtp_wsa883x_qmp.xml
 vendor/etc/audio/sku_sun/mixer_paths_sun_qrd.xml
 vendor/etc/audio/sku_sun/mixer_paths_sun_qrd_sku2.xml
 vendor/etc/audio/sku_sun/resourcemanager_sun_cdp.xml
@@ -106,7 +107,6 @@ vendor/etc/audio/sku_sun/resourcemanager_sun_mtp.xml
 vendor/etc/audio/sku_sun/resourcemanager_sun_qrd.xml
 vendor/etc/audio/sku_sun/resourcemanager_sun_qrd_sku2.xml
 vendor/etc/audio/sku_sun_qssi/audio_policy_configuration.xml
-vendor/etc/a2dp_audio_policy_configuration.xml
 vendor/etc/audio_policy_configuration.xml
 vendor/etc/bluetooth_qti_audio_policy_configuration.xml
 vendor/etc/bluetooth_qti_hearing_aid_audio_policy_configuration.xml
@@ -154,10 +154,10 @@ vendor/lib64/vendor.qti.hardware.bluetooth_sar-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.bttpi-V3-ndk.so
 
 # Bluetooth (A2DP)
+vendor/lib64/btaudio_offload_if.so
 vendor/lib64/hw/android.hardware.bluetooth.audio-impl-qti.so
 vendor/lib64/hw/android.hardware.bluetooth.audio_sw.so;DISABLE_CHECKELF
 vendor/lib64/hw/audio.bluetooth_qti.default.so
-vendor/lib64/btaudio_offload_if.so
 vendor/lib64/libbluetooth_audio_session_aidl_qti.so
 vendor/lib64/libbluetooth_audio_session_qti.so
 vendor/lib64/libbluetooth_audio_session_qti_2_1.so
@@ -178,6 +178,8 @@ vendor/app/CACertService/CACertService.apk
 vendor/app/CneApp/CneApp.apk;REQUIRED=CneApp.libvndfwk_detect_jni.qti_vendor_symlink
 vendor/app/IWlanService/IWlanService.apk
 vendor/bin/cnd
+vendor/etc/cne/mwqem.conf
+vendor/etc/cne/profileMwqem.xml
 vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml
 vendor/etc/cne/wqeclient/ATT/ATT_profile2.xml
 vendor/etc/cne/wqeclient/ATT/ATT_profile3.xml
@@ -207,8 +209,6 @@ vendor/etc/cne/wqeclient/VZW/VZW_profile4.xml
 vendor/etc/cne/wqeclient/VZW/VZW_profile5.xml
 vendor/etc/cne/wqeclient/VZW/VZW_profile6.xml
 vendor/etc/cne/wqeclient/VZW/VZW_profile7.xml
-vendor/etc/cne/mwqem.conf
-vendor/etc/cne/profileMwqem.xml
 vendor/etc/default-permissions/com.qualcomm.qti.cne.xml
 vendor/etc/init/cnd.rc
 vendor/etc/sysconfig/oem-defined-uids.xml
@@ -394,18 +394,18 @@ odm/etc/PanelChaplin/3D-Lut_StandardMode_sRGB.txt
 odm/etc/PanelChaplin/AdjustValue
 odm/etc/PanelChaplin/Lut3D_311
 odm/etc/PanelChaplin/Lut3D_312
+odm/etc/displaycolorfeaturecfg.xml
 odm/etc/init/hw/init.oplus.display.rc
 odm/etc/init/vendor.oplus.hardware.displaypanelfeature-service.rc
 odm/etc/vintf/manifest/manifest_displaycolorfeature_aidl.xml
 odm/etc/vintf/manifest/manifest_oplus_displaypanelfeature_aidl.xml
-odm/etc/displaycolorfeaturecfg.xml
 odm/lib64/libdisplayfossfeature_nature.so
 odm/lib64/libdpaservice.so
 odm/lib64/vendor.oplus.hardware.displaycolorfeature-V1-ndk.so
 odm/lib64/vendor.oplus.hardware.displaypanelfeature-V1-ndk.so;MODULE_SUFFIX=_odm
 vendor/bin/feature_enabler_client
-vendor/etc/init/feature_enabler_client.rc
 vendor/etc/2024-09-06_platform_RSA_SM8750_license_1c6f20f8-67d1-46ef-818d-469363847d91.pfm
+vendor/etc/init/feature_enabler_client.rc
 vendor/etc/platform_RSA_SM8750_license_c8338967-b56e-4693-ae1b-7a17ac371ff6.pfm
 vendor/lib64/libPanelChaplin.so
 vendor/lib64/vendor.oplus.hardware.displaycolorfeature-V1-ndk.so;MODULE_SUFFIX=_vendor
@@ -594,10 +594,10 @@ odm/lib64/libqcodec2_dolbydecoderfilter.so
 odm/lib64/libqcodec2_dolbyencoderfilter.so
 vendor/etc/media_codecs.xml;TRYSRCFIRST
 vendor/etc/media_codecs_c2_audio.xml;TRYSRCFIRST
-vendor/etc/media_codecs_sun.xml;TRYSRCFIRST
-vendor/etc/media_codecs_sun_vendor.xml;TRYSRCFIRST
 vendor/etc/media_codecs_performance_sun.xml;TRYSRCFIRST
 vendor/etc/media_codecs_performance_sun_vendor.xml;TRYSRCFIRST
+vendor/etc/media_codecs_sun.xml;TRYSRCFIRST
+vendor/etc/media_codecs_sun_vendor.xml;TRYSRCFIRST
 vendor/etc/media_codecs_vendor_audio.xml;TRYSRCFIRST
 vendor/etc/media_profiles.xml
 vendor/etc/media_profiles_V1_0.xml
@@ -635,9 +635,9 @@ odm/lib64/libaiboost_ubwc.so
 # OPLUS Charger
 odm/bin/hw/vendor.oplus.hardware.charger-V7-service
 odm/bin/hw/wlschgd
+odm/etc/charge.cfg
 odm/etc/init/vendor.oplus.hardware.charger-V7-service.rc
 odm/etc/vintf/manifest/manifest_oplus_charger_aidl.xml
-odm/etc/charge.cfg
 odm/lib64/libGaiaClient_vnd.so
 
 # OPLUS Log Core
@@ -758,10 +758,10 @@ vendor/lib64/qsn3all.bin
 # QSEECOM
 vendor/bin/hw/vendor.qti.hardware.qseecom@1.0-service
 vendor/bin/qseecomd
+vendor/etc/gpfspath_oem_config.xml
 vendor/etc/init/qseecomd.rc
 vendor/etc/init/vendor.qti.hardware.qseecom@1.0-service.rc
 vendor/etc/vintf/manifest/vendor.qti.hardware.qseecom@1.0-service.xml
-vendor/etc/gpfspath_oem_config.xml
 vendor/lib64/hw/vendor.qti.hardware.qseecom@1.0-impl.so
 vendor/lib64/libGPreqcancel.so
 vendor/lib64/libGPreqcancel_svc.so
@@ -785,8 +785,8 @@ vendor/lib64/libscveObjectTracker.so
 vendor/lib64/libscveObjectTracker_stub.so
 
 # SMC Invoke
-vendor/bin/hw/vendor.qti.hardware.minkipcbinder@1.0-service
 vendor/bin/hlosminkdaemon
+vendor/bin/hw/vendor.qti.hardware.minkipcbinder@1.0-service
 vendor/etc/init/hlosminkdaemon.rc
 vendor/etc/init/vendor.qti.hardware.minkipcbinder@1.0-service.rc
 vendor/etc/vintf/manifest/vendor.qti.hardware.minkipcbinder-service.xml
