@@ -78,21 +78,6 @@ BOARD_USES_GENERIC_KERNEL_IMAGE := true
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
 
-# Kernel modules
-BOARD_SYSTEM_KERNEL_MODULES_LOAD := $(strip $(shell sed 's/#.*$$//;/^$$/d' $(COMMON_PATH)/modules.load.system_dlkm))
-BOARD_VENDOR_KERNEL_MODULES_BLOCKLIST_FILE := $(TARGET_KERNEL_SOURCE)/modules.vendor_blocklist.msm.sun
-BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(COMMON_PATH)/modules.load))
-BOARD_VENDOR_RAMDISK_KERNEL_MODULES_BLOCKLIST_FILE := $(BOARD_VENDOR_KERNEL_MODULES_BLOCKLIST_FILE)
-# qrtr-gunyah.ko is detected by depmod of build_utils.sh in kleaf
-BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := \
-    $(strip $(shell sed 's/#.*$$//;/^$$/d' $(COMMON_PATH)/modules.list.msm.sun)) \
-    qrtr-gunyah.ko
-BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(COMMON_PATH)/modules.load.recovery))
-BOOT_KERNEL_MODULES := $(BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD)
-SYSTEM_KERNEL_MODULES := \
-    $(BOARD_SYSTEM_KERNEL_MODULES_LOAD) \
-    $(strip $(shell sed 's/#.*$$//;/^$$/d' $(COMMON_PATH)/modules.kunit))
-
 # Partitions - Dynamic
 BOARD_ONEPLUS_DYNAMIC_PARTITIONS_PARTITION_LIST := odm product system system_dlkm system_ext vendor vendor_dlkm
 BOARD_SUPER_PARTITION_GROUPS := oneplus_dynamic_partitions
@@ -211,20 +196,7 @@ ODM_MANIFEST_FILES += \
     $(COMMON_PATH)/configs/vintf/network_manifest_odm.xml
 
 # WiFi
-BOARD_WLAN_DEVICE := qcwcn
-BOARD_HOSTAPD_DRIVER := NL80211
-BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
-BOARD_WPA_SUPPLICANT_DRIVER := $(BOARD_HOSTAPD_DRIVER)
-BOARD_WPA_SUPPLICANT_PRIVATE_LIB := $(BOARD_HOSTAPD_PRIVATE_LIB)
-BOARD_WPA_SUPPLICANT_PRIVATE_LIB_EVENT := "ON"
-WIFI_DRIVER_STATE_CTRL_PARAM := "/dev/wlan"
-WIFI_DRIVER_STATE_OFF := "OFF"
-WIFI_DRIVER_STATE_ON := "ON"
-WIFI_FEATURE_HOSTAPD_11AX := true
-WIFI_HIDL_FEATURE_AWARE := true
-WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
-WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
-WPA_SUPPLICANT_VERSION := VER_0_8_X
+include device/qcom/wlan/sun/BoardConfigWlan.mk
 
 # Include the proprietary files BoardConfig.
 include vendor/oneplus/sm8750-common/BoardConfigVendor.mk
