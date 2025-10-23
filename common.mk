@@ -136,6 +136,9 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     ueventd.oplus.rc
 
+# Kernel
+PRODUCT_ENABLE_UFFD_GC := true
+
 # Keymint
 PRODUCT_PACKAGES += \
     android.hardware.hardware_keystore_V3.xml \
