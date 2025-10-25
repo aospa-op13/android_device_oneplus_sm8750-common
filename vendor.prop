@@ -76,6 +76,7 @@ vendor.gatekeeper.is_security_level_spu=0
 
 # Graphics
 debug.sf.enable_advanced_sf_phase_offset=1
+graphics.gpu.profiler.support=true
 
 # IMS
 persist.vendor.ims.rtp.enableqxdm=15
