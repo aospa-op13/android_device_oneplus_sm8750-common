@@ -40,6 +40,7 @@ persist.vendor.data.mode=concurrent
 persist.vendor.data.mutualex.mode=disabled
 
 # Radio
+persist.oplus.qspa.modem=enabled
 persist.radio.hvolte.enable=1
 persist.vendor.radio.poweron_opt=1
 

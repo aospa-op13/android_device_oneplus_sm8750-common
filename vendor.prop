@@ -73,13 +73,11 @@ media.c2.hal.selection=aidl
 media.stagefright.audio.deep=false
 vendor.media.omx=0
 
-# Netflix
-ro.netflix.bsp_rev=Q8750-39568-1
-
 # Sensors
 persist.vendor.sensors.debug.hal=0
 
 # Widevine
+vendor.wv.oemcrypto.debug.enable_external_display_check=false
 vendor.wv.oemcrypto.debug.enable_hlos_data_path=true
 
 # Zygote
