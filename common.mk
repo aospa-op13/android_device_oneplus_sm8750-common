@@ -238,7 +238,7 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors-service.oplus-multihal \
     sensors.dynamic_sensor_hal \
     sensors.oplus \
-    sensors.qsh_wrapper
+    sensors.wrapper
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
