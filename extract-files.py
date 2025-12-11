@@ -76,6 +76,8 @@ blob_fixups: blob_fixups_user_type = {
         .regex_replace(r'/\* (Huo\.Chen@SYSTEM\.RF, 2024/09/06, Add for ICC) \*/', r'# \1'),
     'product/etc/sysconfig/com.android.hotwordenrollment.common.util.xml': blob_fixup()
         .regex_replace('/my_product', '/product'),
+    'system_ext/bin/horae': blob_fixup()
+        .replace_needed('libprotobuf-cpp-lite.so', 'libprotobuf-cpp-lite-21.7.so'),
     'vendor/etc/clstc_config_library.xml': blob_fixup()
         .regex_replace(r'\n.*OPLUS_FEATURE_DSIPLAY[\s\S]*?OPLUS_FEATURE_DSIPLAY.*\n', ''),
     'vendor/etc/media_codecs_sun.xml': blob_fixup()
