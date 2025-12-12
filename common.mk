@@ -32,6 +32,9 @@ PRODUCT_PACKAGES += \
     tri-state-key-calibrate
 
 # Audio
+PRODUCT_PACKAGES += \
+    libaudioutils_shim
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/audio_module_config_primary.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/audio_module_config_primary.xml \
     $(LOCAL_PATH)/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_ODM)/etc/audio_policy_configuration.xml
