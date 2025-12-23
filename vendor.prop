@@ -98,6 +98,10 @@ vendor.media.omx=0
 # Pasr
 vendor.pasr.activemode.enabled=true
 
+# Radio
+persist.vendor.radio.mdccbsize=164
+ro.telephony.default_network=33,33
+
 # Sensors
 persist.vendor.sensors.debug.hal=0
 
