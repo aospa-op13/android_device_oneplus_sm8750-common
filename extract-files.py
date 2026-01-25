@@ -112,16 +112,6 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/libaudio_aidl_conversion_common_ndk_prebuilt.so': blob_fixup()
         .replace_needed('android.media.audio.common.types-V4-ndk.so', 'android.media.audio.common.types-V3-ndk.so'),
     (
-        'vendor/lib64/soundfx/libbundleaidl.so',
-        'vendor/lib64/soundfx/libdownmixaidl.so',
-        'vendor/lib64/soundfx/libdynamicsprocessingaidl.so',
-        'vendor/lib64/soundfx/libloudnessenhanceraidl.so',
-        'vendor/lib64/soundfx/libreverbaidl.so',
-        'vendor/lib64/soundfx/libvisualizeraidl.so',
-    ): blob_fixup()
-        .replace_needed('android.media.audio.common.types-V4-ndk.so', 'android.media.audio.common.types-V3-ndk.so')
-        .replace_needed('libaudio_aidl_conversion_common_ndk.so', 'libaudio_aidl_conversion_common_ndk_prebuilt.so'),
-    (
         'vendor/lib64/libapengine.so',
         'vendor/lib64/libqti-perfd.so',
     ): blob_fixup()
