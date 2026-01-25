@@ -54,16 +54,16 @@ vendor/lib64/hw/audio/libQnnHtp.so;MODULE_SUFFIX=.audio
 vendor/lib64/hw/audio/libQnnHtpV79Skel.so;MODULE_SUFFIX=.audio
 vendor/lib64/hw/audio/libQnnHtpV79Stub.so;MODULE_SUFFIX=.audio
 vendor/lib64/hw/audio/libQnnSystem.so;MODULE_SUFFIX=.audio
-vendor/lib64/hw/libaudiocorehal.default.so;DISABLE_CHECKELF;REQUIRED=manifest_audiocorehal_default.xml
-vendor/lib64/hw/libaudiocorehal.qti.so;DISABLE_CHECKELF
-vendor/lib64/hw/libaudioeffecthal.qti.so;REQUIRED=audioeffectservice_qti.xml
+vendor/lib64/hw/libaudiocorehal.default.so;DISABLE_DEPS;REQUIRED=manifest_audiocorehal_default.xml
+vendor/lib64/hw/libaudiocorehal.qti.so;DISABLE_DEPS
+vendor/lib64/hw/libaudioeffecthal.qti.so;DISABLE_DEPS;REQUIRED=audioeffectservice_qti.xml
 vendor/lib64/libPeripheralStateUtils.so
 vendor/lib64/libVoiceSdk.so
 vendor/lib64/libadm.so
 vendor/lib64/libar-pal.so
 vendor/lib64/libarmemlog.so
 vendor/lib64/libaudio_log_utils.so
-vendor/lib64/libaudioplatformconverter.qti.so
+vendor/lib64/libaudioplatformconverter.qti.so;DISABLE_DEPS
 vendor/lib64/libcapiv2svacnnvendor.so
 vendor/lib64/libcapiv2svarnnvendor.so
 vendor/lib64/libcapiv2udk7vendor.so
@@ -109,7 +109,7 @@ vendor/etc/usecaseKvManager.xml
 
 # Audio - old AIDL dependencies
 vendor/lib64/android.hardware.bluetooth.audio-impl.so:vendor/lib64/android.hardware.bluetooth.audio-impl_prebuilt.so;FIX_SONAME
-vendor/lib64/libaudio_aidl_conversion_common_ndk.so:vendor/lib64/libaudio_aidl_conversion_common_ndk_prebuilt.so;FIX_SONAME
+vendor/lib64/libaudio_aidl_conversion_common_ndk.so:vendor/lib64/libaudio_aidl_conversion_common_ndk_prebuilt.so;DISABLE_DEPS;FIX_SONAME
 vendor/lib64/libaudioserviceexampleimpl.so;DISABLE_DEPS
 vendor/lib64/libbluetooth_audio_session_aidl.so:vendor/lib64/libbluetooth_audio_session_aidl_prebuilt.so;FIX_SONAME
 
@@ -142,7 +142,7 @@ vendor/lib64/vendor.qti.hardware.bttpi-V3-ndk.so
 # Bluetooth (A2DP)
 vendor/lib64/btaudio_offload_if.so
 vendor/lib64/hw/android.hardware.bluetooth.audio-impl-qti.so
-vendor/lib64/hw/android.hardware.bluetooth.audio_sw.so;DISABLE_CHECKELF
+vendor/lib64/hw/android.hardware.bluetooth.audio_sw.so;DISABLE_DEPS
 vendor/lib64/hw/audio.bluetooth_qti.default.so
 vendor/lib64/libbluetooth_audio_session_aidl_qti.so
 vendor/lib64/libbluetooth_audio_session_qti.so
