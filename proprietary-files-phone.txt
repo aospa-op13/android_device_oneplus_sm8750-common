@@ -1,5 +1,5 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
-## are from OnePlus 13 (CPH2653_16.0.3.501(EX01)).
+## are from OnePlus 13 (CPH2653_16.0.5.701(EX01)).
 
 # ConsumerIR
 my_product/del-app/ConsumerIRApp/ConsumerIRApp.apk:product/app/ConsumerIRApp/ConsumerIRApp.apk;PRESIGNED
@@ -306,7 +306,7 @@ odm/lib64/libsubsys-utils.so
 odm/lib64/libvasapi.so
 odm/lib64/vendor.oplus.hardware.communicationcenter-V2-ndk.so
 odm/lib64/vendor.oplus.hardware.subsys-V5-ndk.so
-odm/lib64/vendor.oplus.hardware.subsys_radio-V8-ndk.so
+odm/lib64/vendor.oplus.hardware.subsys_radio-V9-ndk.so
 vendor/bin/hw/qcrilNrd
 vendor/bin/ks
 vendor/bin/qms
