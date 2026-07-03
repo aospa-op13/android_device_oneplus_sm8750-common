@@ -423,9 +423,6 @@ vendor/etc/media_codecs_sun_vendor.xml:vendor/etc/media_codecs_sun.xml;TRYSRCFIR
 vendor/lib64/libmmosal_vendor.so
 vendor/lib64/qti.video.utils.videobufferlayout.so
 
-# Memory
-vendor/lib64/libvmmem.so
-
 # Misc
 odm/etc/init/init.oppo.reserve.rc
 
