@@ -160,6 +160,10 @@ PRODUCT_PACKAGES += \
     android.hardware.security.keymint3-service.strongbox.nxp \
     android.hardware.weaver-service.nxp
 
+PRODUCT_SOONG_NAMESPACES += \
+    hardware/nxp/keymint/generic \
+    hardware/nxp/weaver/generic
+
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.keystore.app_attest_key.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.keystore.app_attest_key.xml \
     frameworks/native/data/etc/android.software.device_id_attestation.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.device_id_attestation.xml
