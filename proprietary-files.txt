@@ -445,13 +445,13 @@ vendor/lib64/libspcom.so
 
 # Media
 odm/etc/camera/media_profiles.xml:odm/etc/media_profiles_V1_0.xml
-odm/lib64/libc2filterplugin.so
+odm/lib64/libc2filterplugin.so;DISABLE_DEPS;
 odm/lib64/libdolbydecoderprocessor.so
 odm/lib64/libdolbyeglcore.so
 odm/lib64/libdolbyencoderprocessor.so
 odm/lib64/libdolbyottcameracontrol.so
-odm/lib64/libqcodec2_dolbydecoderfilter.so
-odm/lib64/libqcodec2_dolbyencoderfilter.so
+odm/lib64/libqcodec2_dolbydecoderfilter.so;DISABLE_DEPS;
+odm/lib64/libqcodec2_dolbyencoderfilter.so;DISABLE_DEPS;
 vendor/etc/media_codecs.xml;TRYSRCFIRST
 vendor/etc/media_codecs_c2_audio.xml;TRYSRCFIRST
 vendor/etc/media_codecs_performance_sun.xml;TRYSRCFIRST
@@ -463,10 +463,6 @@ vendor/etc/media_profiles.xml
 vendor/etc/media_profiles_V1_0.xml
 vendor/etc/media_profiles_sun.xml
 vendor/lib64/libmmosal_vendor.so
-vendor/lib64/libqcodec2_base.so;MODULE_SUFFIX=_vendor
-vendor/lib64/libqcodec2_utils.so;MODULE_SUFFIX=_vendor
-vendor/lib64/libqcodec2_basecodec.so;MODULE_SUFFIX=_vendor
-vendor/lib64/libqconfigclient.so;MODULE_SUFFIX=_vendor
 vendor/lib64/qti.video.utils.videobufferlayout.so
 
 # Memory
