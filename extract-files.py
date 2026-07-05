@@ -37,10 +37,6 @@ lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
     (
         'com.qualcomm.qti.dpm.api@1.0',
-        'libqcodec2_base',
-        'libqcodec2_utils',
-        'libqcodec2_basecodec',
-        'libqconfigclient',
         'vendor.qti.ImsRtpService-V1-ndk',
         'vendor.qti.data.factoryservice-V1-ndk',
         'vendor.qti.data.mwqemaidlservice-V1-ndk',
