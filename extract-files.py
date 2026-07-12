@@ -24,7 +24,7 @@ namespace_imports = [
     'vendor/qcom/opensource/commonsys/display',
     'vendor/qcom/opensource/commonsys-intf/display',
     'vendor/qcom/opensource/dataservices',
-    'vendor/qcom/common/vendor/adreno-v',
+    'vendor/qcom/common/vendor/adreno/v',
     'vendor/qcom/common/vendor/media/6.6',
     'vendor/qcom/common/vendor/perf',
 ]
