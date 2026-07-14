@@ -86,6 +86,10 @@ blob_fixups: blob_fixups_user_type = {
         .regex_replace('/my_product', '/product'),
     'system_ext/bin/horae': blob_fixup()
         .replace_needed('libprotobuf-cpp-lite.so', 'libprotobuf-cpp-lite-21.7.so'),
+    (
+        'vendor/etc/seccomp_policy/syshealthmon.policy'
+    ): blob_fixup()
+        .add_line_if_missing('lseek: 1'),
     'vendor/etc/clstc_config_library.xml': blob_fixup()
         .regex_replace(r'\n.*OPLUS_FEATURE_DSIPLAY[\s\S]*?OPLUS_FEATURE_DSIPLAY.*\n', ''),
     'vendor/etc/media_codecs_sun.xml': blob_fixup()
