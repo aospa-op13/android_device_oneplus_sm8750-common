@@ -187,16 +187,81 @@ vendor/lib64/vendor.qti.diaghal-V1-ndk.so;MODULE_SUFFIX=_vendor
 # Display (HAL)
 odm/etc/display/cwb_weightspos.json
 odm/etc/vintf/manifest/manifest_oplus_cwb_aidl.xml
+vendor/bin/hw/vendor.qti.hardware.display.color-service
+vendor/etc/init/vendor.qti.hardware.display.color-service.rc
 vendor/lib64/libcwb_client_vendor.so
 vendor/lib64/libcwb_qcom_aidl.so
+vendor/lib64/libhdrvivid.so
 vendor/lib64/libhwcsensor.so
+vendor/lib64/libsdm-brightnessaware-parser.so
 
 # Display (HDR)
+vendor/lib64/libhdr_backlight_adapter.so
+vendor/lib64/libhdr_tm.so
 vendor/lib64/libhdrdynamic.so
 vendor/lib64/libhdrdynamicootf.so
 
+# Display (HWC)
+vendor/bin/qdcmss
+vendor/bin/qguard
+vendor/bin/ubwcconvert
+vendor/etc/init/qdcmss.rc
+vendor/etc/init/qguard.rc
+vendor/etc/qguard.json
+vendor/etc/snapdragon_color_libs_config.xml
+vendor/lib64/libbacklight-calib.so
+vendor/lib64/libdigital-dimming.so
+vendor/lib64/libdpps.so
+vendor/lib64/libgame_enhance.so
+vendor/lib64/libmemutils.so
+vendor/lib64/libqdcm-algo.so
+vendor/lib64/libqdcm-json-mode-parser.so
+vendor/lib64/libqdcm-mode-parser.so
+vendor/lib64/libsnapdragoncolor-manager.so
+vendor/lib64/libsnapdragoncolor-qdcm.so
+vendor/lib64/libtinyxml2_1.so
+vendor/lib64/libubwcp.so
+
 # Display (SDM)
 odm/lib64/libdolbyclstc.so
+vendor/etc/clstc_config_library.xml
+vendor/lib64/libclstc_algorithm_adapter.so
+vendor/lib64/libclstc_gcp_adapter.so
+vendor/lib64/libclstc_tm.so
+vendor/lib64/libdemura_oem_plugin.so
+vendor/lib64/libdisplayqos.so
+vendor/lib64/libdisplayskuutils.so
+vendor/lib64/libfeutils.so
+vendor/lib64/libintervmipc.so
+vendor/lib64/libqrtrclient.so
+vendor/lib64/libqseed3.so
+vendor/lib64/librcmask.so
+vendor/lib64/libsdm-color.so
+vendor/lib64/libsdm-colormgr-algo.so
+vendor/lib64/libsdm-disp-vndapis.so
+vendor/lib64/libsdmextension.so
+vendor/lib64/libtestutils.so
+vendor/lib64/libvmfilexfer.so
+
+# Display configurations
+vendor/etc/display/DPU1010.xml
+vendor/etc/display/DPU10__.xml
+vendor/etc/display/DPU11__.xml
+vendor/etc/display/DPU1230.xml
+vendor/etc/display/DPU1240.xml
+vendor/etc/display/DPU12__.xml
+vendor/etc/display/DPU9__.xml
+vendor/etc/display/advanced_sf_offsets.xml
+vendor/etc/display/camera_alignments.json
+vendor/etc/display/cpu_alignments.json
+vendor/etc/display/default_alignments.json
+vendor/etc/display/display_alignments.json
+vendor/etc/display/formats.json
+vendor/etc/display/graphics_alignments.json
+vendor/etc/display/pipe_config_DPU11__.xml
+vendor/etc/display/thermallevel_to_fps.xml
+vendor/etc/display/ubwc_alignments.json
+vendor/etc/display/video_alignments.json
 
 # Display features
 odm/bin/hw/vendor.oplus.hardware.displaypanelfeature-service
@@ -216,9 +281,15 @@ odm/etc/init/hw/init.oplus.display.rc
 odm/etc/init/vendor.oplus.hardware.displaypanelfeature-service.rc
 odm/etc/vintf/manifest/manifest_oplus_displaypanelfeature_aidl.xml
 odm/lib64/libdpaservice.so
+vendor/bin/feature_enabler_client
+vendor/etc/init/feature_enabler_client.rc
 vendor/etc/2024-10-11_platform_RSA_SM8750_license_d07bab28-156e-49b6-9eda-103eb7c6f6de.pfm
 vendor/etc/platform_RSA_SM8750_license_c8338967-b56e-4693-ae1b-7a17ac371ff6.pfm
 vendor/lib64/libPanelChaplin.so
+
+# Display postprocessing
+vendor/bin/ppd
+vendor/lib64/libdisp-aba.so
 
 # Dolby Vision
 odm/etc/dolby/display/dolby_vision.cfg
