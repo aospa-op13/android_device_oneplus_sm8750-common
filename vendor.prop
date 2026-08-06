@@ -83,6 +83,9 @@ persist.vendor.sensors.debug.hal=0
 # VM
 ro.vendor.vm.ssr.enable=false
 
+# Update engine
+ro.virtual_ab.compression.threads=true
+
 # Widevine
 vendor.wv.oemcrypto.debug.enable_external_display_check=false
 vendor.wv.oemcrypto.debug.enable_hlos_data_path=true
