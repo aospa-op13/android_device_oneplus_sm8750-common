@@ -269,6 +269,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
 
+$(call soong_config_set,update_engine,map_vabc_in_recovery,true)
+
 # USB
 PRODUCT_PACKAGES += \
     oplus_usb_compositions.conf
