@@ -70,29 +70,6 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 # DebugFS
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 
-# DLKM
-TARGET_KERNEL_DLKM_DISABLE := false
-TARGET_KERNEL_DLKM_AUDIO_OVERRIDE := true
-TARGET_KERNEL_DLKM_BT_OVERRIDE := true
-TARGET_KERNEL_DLKM_CAMERA_OVERRIDE := true
-TARGET_KERNEL_DLKM_EVA_OVERRIDE := true
-TARGET_KERNEL_DLKM_FASTRPC_OVERRIDE := true
-TARGET_KERNEL_DLKM_NFC_OVERRIDE := true
-TARGET_KERNEL_DLKM_DATA_OVERRIDE := true
-TARGET_KERNEL_DLKM_DATARMNET_OVERRIDE := true
-TARGET_KERNEL_DLKM_DATARMNETEXT_OVERRIDE := true
-TARGET_KERNEL_DLKM_DATAIPA_OVERRIDE := true
-TARGET_KERNEL_DLKM_DISPLAY_OVERRIDE := true
-TARGET_KERNEL_DLKM_MM_DRV_OVERRIDE := true
-TARGET_KERNEL_DLKM_SECURE_MSM_OVERRIDE := true
-TARGET_KERNEL_DLKM_SPU_OVERRIDE := true
-TARGET_KERNEL_DLKM_SYNX_OVERRIDE := true
-TARGET_KERNEL_DLKM_THERMAL_OVERRIDE := true
-TARGET_KERNEL_DLKM_TOUCH_OVERRIDE := true
-TARGET_KERNEL_DLKM_VIDEO_OVERRIDE := true
-TARGET_KERNEL_DLKM_WLAN_OVERRIDE := true
-TARGET_KERNEL_DLKM_MMRM_OVERRIDE := true
-
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
@@ -117,7 +94,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/gps/gps.conf:$(TARGET_COPY_OUT_ODM)/etc/gps.conf
 
 # Health
-$(call inherit-product, vendor/qcom/opensource/healthd-ext/health-vendor-product.mk)
+PRODUCT_PACKAGES += \
+    android.hardware.health-service.qti \
+    android.hardware.health-service.qti_recovery
 
 # Hotword enrollment
 PRODUCT_COPY_FILES += \
@@ -306,6 +285,12 @@ PRODUCT_COPY_FILES += \
 
 # Virtualization service
 $(call inherit-product, packages/modules/Virtualization/apex/product_packages.mk)
+
+# WiFi
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.wifi.aware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.aware.xml \
+    frameworks/native/data/etc/android.hardware.wifi.passpoint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.passpoint.xml \
+    frameworks/native/data/etc/android.hardware.wifi.rtt.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.rtt.xml \
 
 # Inherit from the proprietary files makefile.
 $(call inherit-product, vendor/oneplus/sm8750-common/sm8750-common-vendor.mk)
