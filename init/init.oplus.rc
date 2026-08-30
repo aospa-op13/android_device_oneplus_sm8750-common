@@ -11,6 +11,11 @@ on fs
     # Update touchpanel firmware in case we ship newer firmware in /odm
     write /proc/touchpanel/tp_fw_update 0
 
+on boot
+    # Wireless Charging
+    chown system system /proc/wireless/enable_tx
+    chmod 0666 /proc/wireless/enable_tx
+
 on post-fs-data
     # ADSP ramdump
     mkdir /data/vendor/mmdump 0777 system system
