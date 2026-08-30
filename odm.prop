@@ -8,6 +8,7 @@ sys.oplus_ftm_mode=997
 # Bluetooth
 persist.bluetooth.oplus.export.nv_overwrite_region=true
 persist.vendor.bluetooth.modem_nv_support=true
+bluetooth.device.default_name=OnePlus 13
 
 # Display
 vendor.display.disable_noise_layer=1
