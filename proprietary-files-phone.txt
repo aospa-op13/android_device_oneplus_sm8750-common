@@ -238,7 +238,6 @@ system_ext/etc/permissions/qti_permissions.xml
 system_ext/framework/qcrilhook.jar
 system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 vendor/bin/hw/qcrilNrd
-vendor/bin/init.qcrild.sh
 vendor/bin/ks
 vendor/bin/qms
 vendor/bin/qtigetprop
