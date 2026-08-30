@@ -14,10 +14,9 @@ cc_library_static {
 }
 
 prebuilt_etc {
-    name: "fstab.default",
-    src: "fstab.default",
+    name: "fstab.qcom",
+    src: "fstab.qcom",
     vendor: true,
-    vendor_ramdisk_available: true,
 }
 
 prebuilt_etc {
@@ -65,24 +64,6 @@ prebuilt_etc {
 sh_binary {
     name: "init.class_main.sh",
     src: "init.class_main.sh",
-    vendor: true,
-}
-
-sh_binary {
-    name: "init.kernel.post_boot-memory.sh",
-    src: "init.kernel.post_boot-memory.sh",
-    vendor: true,
-}
-
-sh_binary {
-    name: "init.kernel.post_boot-sun.sh",
-    src: "init.kernel.post_boot-sun.sh",
-    vendor: true,
-}
-
-sh_binary {
-    name: "init.kernel.post_boot-sun_default_6_2.sh",
-    src: "init.kernel.post_boot-sun_default_6_2.sh",
     vendor: true,
 }
 

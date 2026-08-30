@@ -4,6 +4,7 @@
 //
 
 runtime_resource_overlay {
-    name: "OPlusSettingsResCommon",
-    device_specific: true,
+    name: "OnePlusSM8750CarrierConfig",
+    aaptflags: ["--keep-raw-values"],
+    product_specific: true,
 }
