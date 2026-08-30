@@ -20,8 +20,7 @@ from extract_utils.main import (
 
 namespace_imports = [
     'device/oneplus/sm8750-common',
-    'hardware/qcom-caf/sm8750',
-    'hardware/qcom-caf/wlan',
+    'hardware/qcom/wlan',
     'hardware/oplus',
     'vendor/qcom/opensource/commonsys/display',
     'vendor/qcom/opensource/commonsys-intf/display',
@@ -43,6 +42,9 @@ lib_fixups: lib_fixups_user_type = {
         'vendor.qti.diaghal-V1-ndk',
         'vendor.qti.hardware.dpmaidlservice-V1-ndk',
         'vendor.qti.hardware.wifidisplaysession_aidl-V1-ndk',
+        'vendor.qti.hardware.vpp-V1-ndk',
+        'vendor.qti.latencyaidlservice-V1-ndk',
+        'vendor.qti.MemHal-V1-ndk',
         'vendor.qti.qccsyshal_aidl-V1-ndk',
         'vendor.qti.qccvndhal_aidl-V1-ndk',
     ): lib_fixup_vendor_suffix,
@@ -58,6 +60,7 @@ lib_fixups: lib_fixups_user_type = {
         'libaudioserviceexampleimpl',
         'liblx-osal',
         'libvui_intf',
+        'libwpa_client',
     ): lib_fixup_remove,
 }
 
@@ -66,15 +69,6 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libshims_aidl_fingerprint_v3.oplus.so'),
     'product/etc/sysconfig/com.android.hotwordenrollment.common.util.xml': blob_fixup()
         .regex_replace('/my_product', '/product'),
-    'system_ext/bin/wfdservice64': blob_fixup()
-        .add_needed('libwfdservice_shim.so'),
-    'system_ext/lib64/libwfdservice.so': blob_fixup()
-        .replace_needed('android.media.audio.common.types-V2-cpp.so', 'android.media.audio.common.types-V4-cpp.so'),
-    'vendor/bin/system_dlkm_modprobe.sh': blob_fixup()
-        .regex_replace(r'.*\bzram or zsmalloc\b.*\n', '')
-        .regex_replace(r'-e "zram" -e "zsmalloc"', ''),
-    'vendor/bin/vendor_modprobe.sh': blob_fixup()
-        .regex_replace(r'\n.*OPLUS_FEATURE_WIFI_FTM[\s\S]*?OPLUS_FEATURE_WIFI_FTM.*\n', ''),
     'vendor/etc/libnfc-nci.conf': blob_fixup()
         .regex_replace('NFC_DEBUG_ENABLED=1', 'NFC_DEBUG_ENABLED=0'),
     'vendor/etc/libnfc-nxp.conf': blob_fixup()
@@ -82,9 +76,6 @@ blob_fixups: blob_fixups_user_type = {
         .regex_replace('NFC_DEBUG_ENABLED=1', 'NFC_DEBUG_ENABLED=0'),
     'vendor/etc/media_codecs_sun.xml': blob_fixup()
         .regex_replace('.*media_codecs_(google_audio|google_c2|google_telephony|google_video|vendor_audio).*\n', ''),
-    'vendor/etc/seccomp_policy/gnss@2.0-qsap-location.policy': blob_fixup()
-        .add_line_if_missing('sched_get_priority_min: 1')
-        .add_line_if_missing('sched_get_priority_max: 1'),
     'vendor/lib64/hw/libaudiocorehal.qti.so': blob_fixup()
         .replace_needed('android.hardware.audio.core.sounddose-V1-ndk.so', 'android.hardware.audio.core.sounddose-V2-ndk.so')
         .replace_needed('android.hardware.audio.common-V1-ndk.so', 'android.hardware.audio.common-V3-ndk.so')
@@ -132,9 +123,7 @@ module = ExtractUtilsModule(
     namespace_imports=namespace_imports,
 )
 
-module.add_proprietary_file('proprietary-files-phone.txt').add_copy_files_guard(
-    'TARGET_IS_TABLET', 'true', invert=True
-)
+module.add_proprietary_file('proprietary-files-phone.txt')
 
 if __name__ == '__main__':
     utils = ExtractUtils.device(module)
