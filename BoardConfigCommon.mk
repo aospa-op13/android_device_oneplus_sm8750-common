@@ -51,10 +51,6 @@ BUILD_BROKEN_DUP_RULES := true
 BOARD_INIT_BOOT_HEADER_VERSION := 4
 BOARD_MKBOOTIMG_INIT_ARGS += --header_version $(BOARD_INIT_BOOT_HEADER_VERSION)
 
-# Init
-TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH):libinit_oplus
-TARGET_RECOVERY_DEVICE_MODULES := libinit_oplus
-
 # Kernel
 BOARD_BOOTCONFIG := \
     androidboot.hardware=qcom \
