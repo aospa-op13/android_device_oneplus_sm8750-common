@@ -4,8 +4,6 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-PRODUCT_USE_SCUDO := true
-
 # A/B
 ENABLE_AB := true
 ENABLE_VIRTUAL_AB := true
