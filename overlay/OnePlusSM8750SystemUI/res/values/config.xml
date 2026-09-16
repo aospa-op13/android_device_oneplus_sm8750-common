@@ -5,10 +5,6 @@
 -->
 <resources>
 
-     <!-- Should we vibrate on an icon animation of the shelf. This should only be active if the
-          vibrator is capable of subtle vibrations -->
-     <bool name="config_vibrateOnIconAnimation">true</bool>
-
      <!-- Type of a sensor that provides a low-power estimate of the desired display
      brightness, suitable to listen to while the device is asleep (e.g. during
      always-on display) -->
