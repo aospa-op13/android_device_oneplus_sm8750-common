@@ -312,5 +312,19 @@ PRODUCT_COPY_FILES += \
 # Virtualization service
 $(call inherit-product, packages/modules/Virtualization/apex/product_packages.mk)
 
+# WiFi
+PRODUCT_PACKAGES += \
+    firmware_WCNSS_qcom_cfg.ini_symlink-kiwi_v2 \
+    firmware_WCNSS_qcom_cfg.ini_symlink-peach \
+    firmware_WCNSS_qcom_cfg.ini_symlink-peach_v2 \
+    firmware_WCNSS_qcom_cfg.ini_symlink-wcn7750 \
+    firmware_WCNSS_qcom_cfg.ini_symlink-qca6750 \
+    firmware_wlan_mac.bin_symlink-kiwi_v2 \
+    firmware_wlan_mac.bin_symlink-peach \
+    firmware_wlan_mac.bin_symlink-peach_v2 \
+    firmware_wlan_mac.bin_symlink-wcn7750 \
+    firmware_wlan_mac.bin_symlink-qca6750 \
+    firmware_wlanmdsp.otaupdate_symlink
+
 # Inherit from the proprietary files makefile.
 $(call inherit-product, vendor/oneplus/sm8750-common/sm8750-common-vendor.mk)
