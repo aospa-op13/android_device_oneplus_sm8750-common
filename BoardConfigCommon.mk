@@ -32,6 +32,11 @@ TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_ABI2 :=
 TARGET_CPU_VARIANT := oryon
 
+# Audio
+DEVICE_MANIFEST_FILE += \
+    vendor/qcom/opensource/audio-hal/primary-hal/configs/common/manifest_non_qmaa.xml \
+    vendor/qcom/opensource/audio-hal/primary-hal/configs/common/manifest_non_qmaa_extn.xml
+
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := sun
 
