@@ -72,7 +72,6 @@ BOARD_KERNEL_CMDLINE := \
     nohugevmalloc \
     nosoftlockup \
     qcom_geni_serial.con_enabled=0 \
-    sysctl.kernel.firmware_config.force_sysfs_fallback=1 \
     mtdoops.fingerprint=$(AOSPA_VERSION)
 
 BOARD_BOOTCONFIG += androidboot.selinux=permissive
