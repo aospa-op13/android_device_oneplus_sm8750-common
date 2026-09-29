@@ -54,7 +54,7 @@ BOARD_MKBOOTIMG_INIT_ARGS += --header_version $(BOARD_INIT_BOOT_HEADER_VERSION)
 # Kernel
 BOARD_BOOTCONFIG := \
     androidboot.hardware=qcom \
-    androidboot.hypervisor.protected_vm.supported=true \
+    androidboot.hypervisor.protected_vm.supported=0 \
     androidboot.load_modules_parallel=true \
     androidboot.memcg=1 \
     androidboot.serialconsole=1 \
@@ -67,7 +67,6 @@ BOARD_KERNEL_CMDLINE := \
     nohugevmalloc \
     nosoftlockup \
     qcom_geni_serial.con_enabled=0 \
-    sysctl.kernel.firmware_config.force_sysfs_fallback=1 \
     mtdoops.fingerprint=$(AOSPA_VERSION)
 
 BOARD_BOOTCONFIG += androidboot.selinux=permissive
