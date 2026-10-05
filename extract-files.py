@@ -85,7 +85,8 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/etc/clstc_config_library.xml': blob_fixup()
         .regex_replace(r'\n.*OPLUS_FEATURE_DSIPLAY[\s\S]*?OPLUS_FEATURE_DSIPLAY.*\n', ''),
     'vendor/etc/media_codecs_sun.xml': blob_fixup()
-        .regex_replace('.*media_codecs_(google_audio|google_c2|google_telephony|google_video|vendor_audio).*\n', ''),
+        .regex_replace('.*media_codecs_(google_audio|google_c2|google_telephony|google_video).*\n', '')
+        .regex_replace('media_codecs_vendor_audio', 'media_codecs_dolby_vision'),
     'vendor/lib64/hw/libaudiocorehal.qti.so': blob_fixup()
         .replace_needed('libaudio_aidl_conversion_common_ndk.so', 'libaudio_aidl_conversion_common_ndk_prebuilt.so'),
     'vendor/lib64/android.hardware.bluetooth.audio-impl_prebuilt.so': blob_fixup()
