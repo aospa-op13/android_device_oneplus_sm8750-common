@@ -297,6 +297,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.thermal-service.qti
 
+# UEFI
+TARGET_USES_UEFI := true
+
 # Update engine
 PRODUCT_PACKAGES += \
     update_engine \
