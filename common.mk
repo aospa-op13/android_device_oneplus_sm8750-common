@@ -32,6 +32,8 @@ PRODUCT_PACKAGES += \
     tri-state-key-calibrate
 
 # Audio
+TARGET_USE_AIDL_QTI_BT_AUDIO := true
+
 PRODUCT_PACKAGES += \
     android.hardware.audio.common-V1-ndk.vendor \
     android.hardware.audio.core-V2-ndk.vendor \
