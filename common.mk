@@ -53,6 +53,10 @@ PRODUCT_COPY_FILES += \
 # Architecture
 TARGET_BOARD_PLATFORM := sun
 
+# Bluetooth
+PRODUCT_PACKAGES += \
+    libbluetooth_audio_session_aidl_shim
+
 # Boot control
 PRODUCT_PACKAGES += \
     android.hardware.boot-service.qti \
