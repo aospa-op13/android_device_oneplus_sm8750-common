@@ -42,6 +42,7 @@ PRODUCT_PACKAGES += \
     android.media.audio.common.types-V3-ndk.vendor \
     android.media.audio.common.types-V4-ndk.vendor \
     libalsautilsv2.vendor \
+    libaudio_aidl_conversion_common_ndk \
     libaudioaidlcommon.vendor \
     libaudioutils_shim \
     libmediautils_vendor.vendor \
