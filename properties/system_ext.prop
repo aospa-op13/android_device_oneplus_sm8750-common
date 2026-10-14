@@ -1,5 +1,9 @@
 # Audio
+qcom.hw.aac.encoder=true
+ro.audio.ihaladaptervendorextension_enabled=true
 ro.oplus.audio.aidl_volume=true
+tunnel.audio.encode=true
+use.voice.path.for.pcm.voip=true
 
 # Bluetooth
 persist.bluetooth.bqr.choppy_threshold=1,1
@@ -7,6 +11,7 @@ persist.bluetooth.bqr.event_mask=0x8004001E
 persist.bluetooth.bqr.min_interval_ms=6000
 
 # Display
+debug.sf.enable_hwc_vds=1
 sys.brightness.disable_gamma_conversion=true
 
 # Horae
