@@ -9,6 +9,7 @@ vendor/etc/acdbdata/nn_vad_models/fai__3.0.0_0.0__eai_4.6_enpuv5.pmd
 vendor/bin/adsprpcd
 vendor/bin/loadalgo
 vendor/etc/init/vendor.qti.adsprpc-guestos-service.rc
+vendor/etc/init/vendor.qti.audio-adsprpc-service.rc
 vendor/lib64/libadsp_default_listener.so
 vendor/lib64/libadsprpc.so
 vendor/lib64/libloadalgo_stub.so
@@ -50,6 +51,7 @@ vendor/etc/models/acd/event.eai
 vendor/etc/models/acd/music.eai
 vendor/etc/models/acd/speech.eai
 vendor/etc/vintf/manifest/qasr_vintf.xml
+vendor/etc/vintf/manifest/soundtrigger.qti.xml
 vendor/lib64/hw/audio/libQnnHtp.so;MODULE_SUFFIX=.audio
 vendor/lib64/hw/audio/libQnnHtpV79Skel.so;MODULE_SUFFIX=.audio
 vendor/lib64/hw/audio/libQnnHtpV79Stub.so;MODULE_SUFFIX=.audio
@@ -57,6 +59,7 @@ vendor/lib64/hw/audio/libQnnSystem.so;MODULE_SUFFIX=.audio
 vendor/lib64/hw/libaudiocorehal.default.so;DISABLE_DEPS;REQUIRED=manifest_audiocorehal_default.xml
 vendor/lib64/hw/libaudiocorehal.qti.so;DISABLE_DEPS
 vendor/lib64/hw/libaudioeffecthal.qti.so;DISABLE_DEPS;REQUIRED=audioeffectservice_qti.xml
+vendor/lib64/hw/libsoundtriggerhal.qti.so
 vendor/lib64/libPeripheralStateUtils.so
 vendor/lib64/libVoiceSdk.so
 vendor/lib64/libadm.so

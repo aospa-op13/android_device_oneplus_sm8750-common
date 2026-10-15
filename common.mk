@@ -59,7 +59,10 @@ TARGET_BOARD_PLATFORM := sun
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    libbluetooth_audio_session_aidl_shim
+    android.hardware.bluetooth.audio-impl \
+    android.hardware.bluetooth.audio-V3-ndk.vendor \
+    libbluetooth_audio_session_aidl_shim \
+    vendor.qti.hardware.bluetooth.audio-V1-ndk.vendor
 
 # Boot control
 PRODUCT_PACKAGES += \
