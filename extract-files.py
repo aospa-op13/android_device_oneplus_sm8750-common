@@ -96,13 +96,20 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib64/libqti-perfd.so',
     ): blob_fixup()
         .replace_needed('vendor.qti.hardware.display.config-V5-ndk.so', 'vendor.qti.hardware.display.config-V12-ndk.so'),
+    'vendor/lib64/hw/libaudiocorehal.qti.so': blob_fixup()
+        .replace_needed('android.hardware.audio.core.sounddose-V1-ndk.so', 'android.hardware.audio.core.sounddose-V2-ndk_oneplus13.so'),
+    'vendor/lib64/android.hardware.bluetooth.audio-impl_oneplus13.so': blob_fixup()
+        .replace_needed('libbluetooth_audio_session_aidl.so', 'libbluetooth_audio_session_aidl_oneplus13.so'),
     'vendor/lib64/libaudioserviceexampleimpl.so': blob_fixup()
         .add_needed('libaudioutils_shim.so')
         .add_needed('libbluetooth_audio_session_aidl_shim.so')
         .binary_regex_replace(
             b'BluetoothAudioSession14GetAudioConfigEv',
             b'BluetoothAudioSession14GetAudioConfV4Ev',
-        ),
+        )
+        .replace_needed('android.hardware.audio.core.sounddose-V2-ndk.so', 'android.hardware.audio.core.sounddose-V2-ndk_oneplus13.so')
+        .replace_needed('android.hardware.bluetooth.audio-impl.so', 'android.hardware.bluetooth.audio-impl_oneplus13.so')
+        .replace_needed('libbluetooth_audio_session_aidl.so', 'libbluetooth_audio_session_aidl_oneplus13.so'),
     (
         'vendor/lib64/libhwcsensor.so',
         'vendor/lib64/libsdmclient.so',

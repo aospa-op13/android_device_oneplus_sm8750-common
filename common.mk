@@ -33,12 +33,14 @@ PRODUCT_PACKAGES += \
     KeyHandler \
     tri-state-key-calibrate
 
+# ANT+
+PRODUCT_PACKAGES += \
+    com.dsi.ant@1.0.vendor
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio.common-V1-ndk.vendor \
     android.hardware.audio.core-V2-ndk.vendor \
-    android.hardware.audio.core-V3-ndk.vendor \
-    android.hardware.audio.core-V4-ndk.vendor \
     android.hardware.audio.core.sounddose-V1-ndk.vendor \
     android.hardware.audio.core.sounddose-V2-ndk.vendor \
     android.media.audio.common.types-V3-ndk.vendor \
@@ -58,10 +60,7 @@ TARGET_BOARD_PLATFORM := sun
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth.audio-impl \
-    android.hardware.bluetooth.audio-V3-ndk.vendor \
-    libbluetooth_audio_session_aidl_shim \
-    vendor.qti.hardware.bluetooth.audio-V1-ndk.vendor
+    libbluetooth_audio_session_aidl_shim
 
 # Boot control
 PRODUCT_PACKAGES += \
