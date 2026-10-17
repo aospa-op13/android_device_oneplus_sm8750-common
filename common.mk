@@ -140,7 +140,11 @@ $(call soong_config_set,libinit,vendor_init_lib,//$(LOCAL_PATH):libinit_oplus)
 
 # Keymint
 PRODUCT_PACKAGES += \
-    android.hardware.hardware_keystore_V3.xml
+    android.hardware.authsecret-service@1.0 \
+    android.hardware.hardware_keystore_V3.xml \
+    android.hardware.security.keymint-service.strongbox-nxp \
+    android.hardware.weaver-service.nxp \
+    android.hardware.weaver-service.nxp.xml
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.keystore.app_attest_key.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.keystore.app_attest_key.xml \
