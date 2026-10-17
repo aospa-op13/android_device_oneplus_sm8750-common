@@ -54,7 +54,7 @@ vendor/etc/models/acd/music.eai
 vendor/etc/models/acd/speech.eai
 vendor/etc/vintf/manifest/qasr_vintf.xml
 vendor/etc/vintf/manifest/soundtrigger.qti.xml
-vendor/lib64/android.hardware.bluetooth.audio-impl.so
+vendor/lib64/android.hardware.bluetooth.audio-impl.so;DISABLE_DEPS:vendor/lib64/android.hardware.bluetooth.audio-impl_oneplus13.so;FIX_SONAME
 vendor/lib64/hw/audio/libQnnHtp.so;MODULE_SUFFIX=.audio
 vendor/lib64/hw/audio/libQnnHtpV79Skel.so;MODULE_SUFFIX=.audio
 vendor/lib64/hw/audio/libQnnHtpV79Stub.so;MODULE_SUFFIX=.audio

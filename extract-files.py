@@ -74,6 +74,16 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libshims_aidl_fingerprint_v3.oplus.so'),
     'odm/etc/init/init.network.rc': blob_fixup()
         .regex_replace(r'/\* (Huo\.Chen@SYSTEM\.RF, 2024/09/06, Add for ICC) \*/', r'# \1'),
+    (
+        'vendor/lib64/android.hardware.bluetooth.audio-impl_oneplus13.so',
+        'vendor/lib64/hw/android.hardware.bluetooth.audio_sw.so',
+    ): blob_fixup()
+        .replace_needed('android.hardware.bluetooth.audio-impl.so', 'android.hardware.bluetooth.audio-impl_oneplus13.so')
+        .replace_needed('android.hardware.audio.effect-V3-ndk.so', 'android.hardware.audio.effect-V2-ndk.so')
+        .replace_needed('android.hardware.audio.common-V5-ndk.so', 'android.hardware.audio.common-V3-ndk.so')
+        .replace_needed('android.media.audio.common.types-V2-ndk.so', 'android.media.audio.common.types-V3-ndk.so')
+        .replace_needed('android.media.audio.common.types-V4-ndk.so', 'android.media.audio.common.types-V3-ndk.so')
+        .replace_needed('android.media.audio.common.types-V5-ndk.so', 'android.media.audio.common.types-V3-ndk.so'),
     'product/etc/sysconfig/com.android.hotwordenrollment.common.util.xml': blob_fixup()
         .regex_replace('/my_product', '/product'),
     'system_ext/bin/horae': blob_fixup()
