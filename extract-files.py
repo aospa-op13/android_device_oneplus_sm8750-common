@@ -20,11 +20,11 @@ from extract_utils.main import (
 namespace_imports = [
     'device/oneplus/sm8750-common',
     'hardware/oplus',
+    'vendor/qcom/common/system/display',
     'vendor/qcom/common/vendor/adreno/v',
     'vendor/qcom/common/vendor/media/6.6',
     'vendor/qcom/common/vendor/perf',
 ]
-
 
 def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
     return f'{lib}_{partition}' if partition == 'vendor' else None
@@ -53,7 +53,6 @@ lib_fixups: lib_fixups_user_type = {
         'vendor.qti.hardware.minkipcbinder-V1-ndk',
         'vendor.qti.hardware.mwqemadapteraidlservice-V1-ndk',
         'vendor.qti.hardware.wifidisplaysession_aidl-V1-ndk',
-        'vendor.qti.hardware.vpp-V1-ndk',
         'vendor.qti.ims.callcapabilityaidlservice-V1-ndk',
         'vendor.qti.ims.configaidlservice-V1-ndk',
         'vendor.qti.ims.connectionaidlservice-V1-ndk',
