@@ -22,6 +22,7 @@ namespace_imports = [
     'hardware/oplus',
     'vendor/qcom/common/system/display',
     'vendor/qcom/common/vendor/adreno/v',
+    'vendor/qcom/common/vendor/display/6.6',
     'vendor/qcom/common/vendor/media/6.6',
     'vendor/qcom/common/vendor/perf',
 ]
