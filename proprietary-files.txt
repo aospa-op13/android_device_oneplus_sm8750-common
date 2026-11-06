@@ -200,6 +200,7 @@ odm/etc/PanelChaplin/Lut3D_311
 odm/etc/PanelChaplin/Lut3D_312
 odm/etc/init/hw/init.oplus.display.rc
 odm/etc/init/vendor.oplus.hardware.displaypanelfeature-service.rc
+odm/etc/static_lut_bt2020_to_sRGB_mm.cube
 odm/etc/vintf/manifest/manifest_oplus_displaypanelfeature_aidl.xml
 odm/etc/vintf/manifest/vintf_manifext_aidl_panelchaplin.xml
 odm/lib64/libPanelChaplin.so
@@ -291,14 +292,29 @@ vendor/lib64/hw/libqtigatekeeper.so
 vendor/firmware/gen70900_aqe.fw
 vendor/firmware/gen70900_sqe.fw
 vendor/firmware/gen70900_zap.mbn
+vendor/firmware/gen70e00_sqe.fw
+vendor/firmware/gen70e00_zap.mbn
+vendor/firmware/gen71700_gmu.bin
 vendor/firmware/gen80000_aqe.fw
 vendor/firmware/gen80000_gmu.bin
 vendor/firmware/gen80000_sqe.fw
 vendor/firmware/gen80000_zap.mbn
+vendor/firmware/gen80600_gmu.bin
 vendor/firmware/gmu_gen70900.bin
+vendor/firmware/vpu30_2v.mbn
+vendor/firmware/vpu30_2v_unsigned.mbn
+vendor/firmware/vpu33_4v.mbn
+vendor/firmware/vpu33_4v_unsigned.mbn
+vendor/firmware/vpu35_4v.mbn
+vendor/firmware/vpu35_4v_unsigned.mbn
+vendor/firmware/wigig.ini
+vendor/gpu/kbc/sequence_manifest_a730.bin
 vendor/gpu/kbc/sequence_manifest.bin
+vendor/gpu/kbc/unified_kbcs_32_a730.bin
 vendor/gpu/kbc/unified_kbcs_32.bin
+vendor/gpu/kbc/unified_kbcs_64_a730.bin
 vendor/gpu/kbc/unified_kbcs_64.bin
+vendor/gpu/kbc/unified_ksqs_a730.bin
 vendor/gpu/kbc/unified_ksqs.bin
 
 # Hexlp
@@ -385,6 +401,7 @@ odm/lib64/aiboost/libQnnHtpV79Stub.so;MODULE_SUFFIX=.aiboost
 odm/lib64/aiboost/libQnnSystem.so;MODULE_SUFFIX=.aiboost
 odm/lib64/aiframe/cdsp/signed/libQnnHtpV79Skel.so;MODULE_SUFFIX=.aiframe_signed
 odm/lib64/aiframe/cdsp/unsigned/libQnnHtpV79Skel.so;MODULE_SUFFIX=.aiframe_unsigned
+odm/lib64/aiframe/libaiboost_litert.so
 odm/lib64/aiframe/libQnnHtp.so;MODULE_SUFFIX=.aiframe
 odm/lib64/aiframe/libQnnHtpPrepare.so;MODULE_SUFFIX=.aiframe
 odm/lib64/aiframe/libQnnHtpV79Stub.so;MODULE_SUFFIX=.aiframe
@@ -410,9 +427,9 @@ odm/lib64/libaiboost_ubwc.so
 
 # OPLUS Charger
 odm/bin/hw/gauged
-odm/bin/hw/vendor.oplus.hardware.charger-V11-service
+odm/bin/hw/vendor.oplus.hardware.charger-V12-service
 odm/bin/hw/wlschgd
-odm/etc/init/vendor.oplus.hardware.charger-V11-service.rc
+odm/etc/init/vendor.oplus.hardware.charger-V12-service.rc
 odm/etc/vintf/manifest/manifest_oplus_charger_aidl.xml
 odm/etc/charge.cfg
 odm/lib64/libGaiaClient_vnd.so
